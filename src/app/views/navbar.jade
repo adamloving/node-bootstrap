@@ -1,0 +1,32 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      img(src="/images/crane-logo.png", style="float: left; margin-right: 10px; position: relative; top: 6px; height: 22px")
+      a.brand(href="/")  
+        | REST API
+
+      ul.nav
+        li#gallery(class="#{ tab == 'gallery' ? 'active' : ''}")
+          a(href="/") Gallery
+
+        li#mailer(class="#{ tab == 'mailer' ? 'active' : ''}")
+          a(href="/mailers") Mailers
+
+        li#deck-page(class="#{ tab == 'deck' ? 'active' : ''}")
+          a(href="/deck") Deck
+
+        li#tests(class="#{ tab == 'tests' ? 'active' : ''}")
+          a(href="/test") Tests
+
+      ul.nav.pull-right
+
+        - if (user)
+          li#sign-out.dropdown(class="#{ tab == 'login' ? 'active' : ''}")
+            a.dropdown-toggle(href="#", data-toggle="dropdown") #{user.username}
+            ul.dropdown-menu
+              li#sign-out
+                a(href="/logout") Sign out
+        - else
+          li#sign-in(class="#{ tab == 'login' ? 'active' : ''}")
+            a(href="/login") Sign in
+

@@ -1,0 +1,50 @@
+extends layout
+
+block content
+
+  .row
+    .span4.offset4
+
+      - if (user)
+        p You are already signed in.
+
+      - else
+
+        form.form-signin(method="POST")
+
+          h1 Please sign in
+          p.muted 
+            | This is not working yet
+
+          .well
+            - if (flashErrors)
+              .alert.alert-error #{flashErrors}
+
+            div(style="text-align:center")
+
+            // hr
+
+            input(
+              type="text" 
+              class="input-block-level" 
+              placeholder="coolguy@gmail.com" 
+              name="username")
+
+            input(
+              type="password"
+              class="input-block-level"
+              placeholder="Password"
+              name="password")
+
+            //- p(class="pull-right")
+            //-   a class="muted" href="/account/forgotpassword">I forgot my password</a></p>
+
+            button(
+              class="btn btn-large btn-primary" 
+              type="submit") Sign in
+
+        p
+          | Need an account? 
+          a(href="#{process.env.MAIN_SITE_ROOT_URL}account/signup/") Signup here
+          | .
+

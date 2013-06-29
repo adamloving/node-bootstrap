@@ -1,0 +1,7 @@
+.cache
+node_modules
+.env
+env.sh
+export_env_prod.sh
+export_env_staging.sh
+export_env_dev.sh

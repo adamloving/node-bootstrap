@@ -1,0 +1,32 @@
+{
+  "name": "hello-world",
+  "description": "hello world test app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "coffee-script": "~1.6.2",
+    "jquery-deferred": "~0.3.0",
+    "moment": "~2.0.0",
+    "underscore": "~1.4.4",
+    "kaiseki": "~0.4.0",
+    "memjs": "~0.6.0",
+    "mysql": "~2.0.0-alpha8",
+    "stylus": "~0.32.1",
+    "jade": "~0.31.2",
+    "passport-local": "~0.1.6",
+    "passport": "~0.1.17",
+    "connect-flash": "~0.1.1",
+    "connect-memcached": "0.0.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-stylus": "~0.5.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-mocha-test": "~0.4.0",
+    "grunt-contrib-jade": "~0.6.0",
+    "mocha": "~1.10.0",
+    "expect.js": "~0.2.0"
+  }
+}
